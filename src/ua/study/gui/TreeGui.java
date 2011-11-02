@@ -24,7 +24,7 @@ public class TreeGui {
 	
 	public TreeGui(){
 		tnm = new TreeNodeManager();
-		mainFrame = new JFrame("Дерево");
+		mainFrame = new JFrame("Р”РµСЂРµРІРѕ");
 		mainFrame.setSize(500, 500);
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.setJMenuBar(menuBarInit());
@@ -95,7 +95,7 @@ public class TreeGui {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("Add")){
 				DefaultMutableTreeNode dmtn = (DefaultMutableTreeNode)mainTree.getSelectionPath().getLastPathComponent();
-				String newTreeNodeName = (String)JOptionPane.showInputDialog(mainFrame, "Введите название нового узла:");
+				String newTreeNodeName = (String)JOptionPane.showInputDialog(mainFrame, "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ СѓР·Р»Р°:");
 				tnm.add(tnm.search(dmtn.toString()), new TreeNode(newTreeNodeName));
 				DefaultTreeModel dtm = (DefaultTreeModel) mainTree.getModel();
 				dtm.insertNodeInto(new DefaultMutableTreeNode(newTreeNodeName), dmtn, 0);
